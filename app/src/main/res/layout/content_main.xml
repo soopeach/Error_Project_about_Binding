@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -26,11 +25,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/donut"
+        android:onClick="showDonutOrder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textintro"
-        app:srcCompat="@drawable/donut_circle"
-        android:onClick="showDonutOrder"
-        android:contentDescription="@string/donut" />
+        app:srcCompat="@drawable/donut_circle" />
 
     <ImageView
         android:id="@+id/ice_cream"
@@ -38,11 +37,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/ice_Cream"
+        android:onClick="showIceCreamOrder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/donut"
-        app:srcCompat="@drawable/icecream_circle"
-        android:onClick="showIceCreamOrder"
-        android:contentDescription="@string/ice_Cream" />
+        app:srcCompat="@drawable/icecream_circle" />
 
     <ImageView
         android:id="@+id/froyo"
@@ -50,12 +49,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
+        android:contentDescription="@string/froyo"
+        android:onClick="showFroyoOrder"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ice_cream"
-        android:onClick="showFroyoOrder"
-        app:srcCompat="@drawable/froyo_circle"
-        android:contentDescription="@string/froyo"
-        />
+        app:srcCompat="@drawable/froyo_circle" />
 
     <TextView
         android:id="@+id/textView"
@@ -108,4 +106,3 @@
         app:srcCompat="@android:drawable/stat_notify_sdcard_prepare" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</layout>

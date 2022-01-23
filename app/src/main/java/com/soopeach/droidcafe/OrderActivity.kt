@@ -1,18 +1,11 @@
 package com.soopeach.droidcafe
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.soopeach.droidcafe.databinding.ActivityOrderBinding
-import android.R
-
-import android.widget.TextView
-
-import android.content.Intent
 import android.view.View
-import android.widget.Toast
 import android.widget.RadioButton
-
-
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.soopeach.droidcafe.databinding.ActivityOrderBinding
 
 
 class OrderActivity : AppCompatActivity() {
@@ -43,13 +36,13 @@ class OrderActivity : AppCompatActivity() {
         // Is the button now checked?
         val checked = (view as RadioButton).isChecked
         when (view.getId()) {
-            binding.sameday -> if (checked) // Same day service
+            binding.sameday.id -> if (checked) // Same day service
                 displayToast(getString(R.string.same_day_messenger_service))
 
-            binding.nextday -> if (checked) // Next day delivery
+            binding.nextday.id -> if (checked) // Next day delivery
                 displayToast(getString(R.string.next_day_ground_delivery))
 
-            binding.pickup -> if (checked) // Pick up
+            binding.pickup.id -> if (checked) // Pick up
                 displayToast(getString(R.string.pick_up))
 
             else -> {}
